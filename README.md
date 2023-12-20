@@ -9,6 +9,7 @@
 - [Testing the Prediction Service](#using-the-prediction-service)
 # Introduction  
 This project focuses on building a machine learning project to determine whether a person is a smoker/drinker from a set of numerical features about them.
+Dataset used can be found [here](https://github.com/ossydotpy/smoker-drinker-prediction-service/releases/download/0.1.0/smoking_driking_dataset_Ver01.csv)
 ---
 
 # Getting Started
@@ -53,5 +54,7 @@ python test-predict.py
 - You can also modify the `test-predict.py` file with samples from the [test_data](test_data.py) file.
 
 
-- > [!IMPORTANT]
-  > The prediction service can processe multiple records in a single request.
+
+> [!IMPORTANT]
+> The prediction service can process multiple records in a single request.
+> Have fun with it.
