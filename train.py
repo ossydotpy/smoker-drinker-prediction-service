@@ -118,17 +118,16 @@ if __name__=='__main__':
 
 
     xgb_model = Model(dataset=data, training_function=xgbclf)
-    # xgb_model.tune_random_search(params=xgb_params, cv=5)
-    # xgb_model.train()
-    # xgb_model.predict()
-    # xgb_accuracy = xgb_model.score_model()
-    # print('accuracy:',xgb_accuracy)
-    # print('exporting model...')
-    print(xgb_model.train_data)
+    xgb_model.tune_random_search(params=xgb_params, cv=5)
+    xgb_model.train()
+    xgb_model.predict()
+    xgb_accuracy = xgb_model.score_model()
+    print('accuracy:',xgb_accuracy)
+    print('exporting model...')
+    xgb_model.training_function.save_model(f'model-{xgb_accuracy:.2f}.json')
+    print('model saved as:', f'model-{xgb_accuracy:.2f}.json')
 
-    # xgb_model.training_function.save_model(f'model-{xgb_accuracy:.2f}.json')
-
-    # import pickle
-    # with open (f'vectorizer-{xgb_accuracy:.2f}.bin', 'wb') as f:
-    #     pickle.dump(xgb_model.vectorizer, f)
+    import pickle
+    with open (f'vectorizer-{xgb_accuracy:.2f}.bin', 'wb') as f:
+        pickle.dump(xgb_model.vectorizer, f)
     
