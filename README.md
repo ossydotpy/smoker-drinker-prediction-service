@@ -18,6 +18,11 @@ To run this project, follow these steps:
 # Prerequisites
 
 - Docker: You need to have Docker installed on your system.
+- Pipenv: For environment management.
+install pipenv with
+```bash
+pip install pipenv
+```
 
 # Installation
 
@@ -33,7 +38,7 @@ docker build -t <image-name> .
 
 ```bash
 docker run -it --rm -p 4041:4041 <image-name>
-    ```
+```
 
 4. Create and activate a virtual environment
 
